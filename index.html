@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عالم الأشكال الرباعية | الصف السابع</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: linear-gradient(135deg, #ddd6fe 0%, #ede9fe 50%, #f5f3ff 100%);
+  --header-bg: linear-gradient(135deg, #7c3aed, #a78bfa);
+  --accent: #7c3aed; --accent-dark: #5b21b6; --soft: #c4b5fd; --lighter: #ede9fe;
+  --text: #3b0764; --muted: #6d28d9;
+  --card: rgba(255,255,255,0.98); --panel: rgba(245,240,255,0.98);
+  --border: #c4b5fd; --f1: #c4b5fd; --f2: #ddd6fe; --f3: #ede9fe;
+  --stroke: #7c3aed; --btn: linear-gradient(135deg, #7c3aed, #a78bfa);
+  --shadow: rgba(124, 58, 237, 0.2);
+  --success: #059669; --danger: #dc2626;
+  --p1-color: #7c3aed; --p2-color: #a855f7;
+}
+[data-theme="pink"] {
+  --bg: linear-gradient(135deg, #fbcfe8 0%, #fce7f3 50%, #fdf2f8 100%);
+  --header-bg: linear-gradient(135deg, #db2777, #f472b6);
+  --accent: #db2777; --accent-dark: #9d174d; --soft: #f9a8d4; --lighter: #fce7f3;
+  --text: #831843; --muted: #be185d;
+  --panel: rgba(252,231,243,0.98); --border: #f9a8d4;
+  --f1: #f9a8d4; --f2: #fbcfe8; --f3: #fce7f3;
+  --stroke: #db2777; --btn: linear-gradient(135deg, #db2777, #f472b6);
+  --shadow: rgba(219, 39, 119, 0.2);
+  --p1-color: #db2777; --p2-color: #f472b6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
+body { background: var(--bg); min-height: 100vh; padding: 12px; color: var(--text); transition: 0.5s; font-size: 1em; }
+.wrap { max-width: 1100px; margin: auto; background: var(--card); border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px var(--shadow); }
+
+.school-header {
+  background: var(--header-bg);
+  padding: 22px 18px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 4px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 20px rgba(107, 33, 168, 0.2);
+}
+.header-row-1 { margin-bottom: 14px; }
+.school-header h1 { font-size: 1.7em; font-weight: 900; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.15); letter-spacing: 0.5px; }
+.main-badge { background: rgba(255,255,255,0.3); font-size: 0.95em; padding: 6px 20px; display: inline-block; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.4); }
+.header-row-2 { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.meta-badge { background: rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85em; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.3); transition: 0.3s; }
+.meta-badge:hover { background: rgba(255,255,255,0.35); transform: translateY(-2px); }
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.5);
+  padding: 8px;
+  gap: 5px;
+  justify-content: center;
+}
+
+.tab {
+  flex: 1 1 auto;
+  min-width: 90px;
+  max-width: 120px;
+  padding: 8px 8px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--muted);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+  border: 2px solid var(--border);
+  transition: 0.3s;
+  font-size: 0.75em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+.tab:hover { background: rgba(255,255,255,0.95); transform: translateY(-2px); }
+.tab.active {
+  border-color: var(--accent);
+  background: #fff;
+  color: var(--accent-dark);
+  box-shadow: 0 4px 15px var(--shadow);
+  font-weight: 900;
+}
+
+main { padding: 18px; }
+.sec { display: none; animation: fade 0.4s; }
+.sec.active { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+h2.section-title { font-size: 1.3em; font-weight: 900; border-right: 5px solid var(--accent-dark); padding-right: 10px; margin-bottom: 12px; color: var(--accent-dark); }
+h3 { font-size: 1.05em; font-weight: 800; margin: 10px 0 6px; color: var(--accent-dark); }
+
+.box { background: var(--panel); border: 2px solid var(--border); border-right: 5px solid var(--accent-dark); border-radius: 12px; padding: 12px; margin: 10px 0; line-height: 1.7; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.example-box { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); border: 2px solid #c084fc; border-radius: 12px; padding: 10px; margin: 10px 0; }
+.example-box h4 { color: #6b21a8; margin-bottom: 6px; }
+.example-box .examples { display: flex; gap: 8px; flex-wrap: wrap; }
+.example-box .ex-item { background: #fff; padding: 5px 10px; border-radius: 15px; font-size: 0.85em; font-weight: 700; }
+.properties-box { background: linear-gradient(135deg, #d1fae5, #a7f3d0); border: 2px solid #10b981; border-radius: 12px; padding: 12px; margin: 10px 0; }
+.properties-box h3 { color: #065f46; margin-top: 0; }
+.properties-box ul { list-style: none; padding: 0; }
+.properties-box li { padding: 5px 0; border-bottom: 1px dashed rgba(6,95,70,0.2); font-size: 0.9em; }
+.properties-box li:before { content: "✓ "; color: #059669; font-weight: 900; }
+
+.canvas { background: var(--panel); border: 2px solid var(--border); border-radius: 14px; padding: 10px; margin: 10px 0; text-align: center; }
+svg { width: 100%; max-width: 550px; height: auto; background: rgba(255,255,255,0.8); border-radius: 10px; }
+.pt { cursor: grab; filter: drop-shadow(0 2px 4px var(--shadow)); transition: r 0.2s; }
+.pt:hover { r: 14; }
+.pt:active { cursor: grabbing; }
+.vlabel { font-weight: 900; font-size: 15px; fill: var(--text); }
+.smeasure { font-weight: 700; font-size: 12px; fill: var(--accent-dark); }
+.alabel { font-weight: 900; font-size: 13px; fill: var(--accent-dark); }
+
+.controls-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(85px, 1fr)); gap: 6px; margin-top: 10px; }
+.field { background: #fff; border: 1px solid var(--soft); border-radius: 8px; padding: 5px; text-align: center; }
+.field label { display: block; font-size: 0.7em; font-weight: 700; color: var(--muted); margin-bottom: 2px; }
+.field input { width: 100%; padding: 4px; border: 2px solid var(--soft); border-radius: 6px; text-align: center; font-weight: 700; font-size: 0.9em; color: var(--text); background: #fff; outline: none; }
+.field input:focus { border-color: var(--accent); }
+
+.shape-status { margin-top: 10px; padding: 8px; border-radius: 10px; font-weight: 900; font-size: 1em; text-align: center; transition: 0.3s; border: 2px solid transparent; }
+.shape-status.success { background: #a7f3d0; color: #064e3b; border-color: #059669; }
+.shape-status.fail { background: #fecaca; color: #7f1d1d; border-color: #dc2626; }
+.shape-status.normal { background: var(--lighter); color: var(--accent-dark); border-color: var(--accent-dark); }
+
+.btn { background: var(--btn); color: #fff; border: 2px solid rgba(255,255,255,0.3); padding: 10px 20px; border-radius: 18px; font-weight: 700; font-size: 0.9em; cursor: pointer; box-shadow: 0 4px 12px var(--shadow); transition: 0.25s; margin: 3px; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn.success { background: linear-gradient(135deg, #059669, #10b981); }
+.btn.warning { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+.btn.ghost { background: #fff; color: var(--text); border: 1px solid var(--soft); }
+.btn.help { background: linear-gradient(135deg, #06b6d4, #22d3ee); }
+.btn.danger { background: linear-gradient(135deg, #dc2626, #ef4444); }
+
+.stars-bar { display: flex; justify-content: center; gap: 4px; margin: 8px 0; flex-wrap: wrap; }
+.star { font-size: 1.3em; color: #e5e7eb; transition: 0.3s; }
+
+.concept-map { background: var(--panel); border: 2px solid var(--border); border-radius: 16px; padding: 15px; margin: 10px 0; box-shadow: 0 4px 15px var(--shadow); }
+.concept-map svg { width: 100%; max-width: 800px; height: auto; margin: 0 auto; display: block; }
+.map-shape { cursor: pointer; transition: all 0.3s ease; }
+.map-shape:hover { filter: drop-shadow(0 6px 15px var(--shadow)) brightness(1.1); transform: scale(1.05); }
+.map-line { stroke: var(--accent); stroke-width: 3; fill: none; stroke-dasharray: 6,3; }
+.map-label { font-weight: 900; font-size: 17px; fill: var(--text); text-anchor: middle; pointer-events: none; }
+.map-condition { font-size: 12.5px; fill: var(--muted); text-anchor: middle; font-weight: 800; }
+
+.dual-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+@media(max-width: 600px) { .dual-split { grid-template-columns: 1fr; } }
+.player-zone { background: var(--panel); border: 3px solid var(--border); border-radius: 14px; padding: 10px; position: relative; }
+.player-zone.p1 { border-color: #9333ea; }
+.player-zone.p2 { border-color: #a855f7; }
+.player-zone .zone-label { position: absolute; top: -10px; right: 10px; background: var(--panel); padding: 2px 10px; border-radius: 10px; font-weight: 900; font-size: 0.8em; }
+.player-zone.p1 .zone-label { color: #9333ea; }
+.player-zone.p2 .zone-label { color: #a855f7; }
+.player-zone .zone-score { text-align: center; font-size: 1.5em; font-weight: 900; margin: 5px 0; }
+.player-zone.p1 .zone-score { color: #9333ea; }
+.player-zone.p2 .zone-score { color: #a855f7; }
+.player-zone .zone-opts { display: grid; grid-template-columns: 1fr; gap: 5px; margin-top: 8px; }
+.zone-opt { background: #fff; border: 2px solid var(--soft); border-radius: 10px; padding: 10px; cursor: pointer; font-weight: 700; text-align: center; transition: 0.2s; font-size: 0.9em; }
+.zone-opt:active { transform: scale(0.97); }
+.zone-opt.correct { border-color: #059669; background: #a7f3d0; color: #064e3b; }
+.zone-opt.bad { border-color: #dc2626; background: #fecaca; color: #7f1d1d; }
+.zone-opt.disabled { opacity: 0.5; pointer-events: none; }
+
+.dual-header { display: flex; justify-content: space-around; align-items: center; margin: 10px 0; padding: 10px; background: var(--panel); border-radius: 12px; border: 2px solid var(--border); }
+.dual-timer { font-size: 2em; font-weight: 900; color: var(--accent); }
+.dual-timer.urgent { color: #dc2626; animation: pulse 0.7s infinite; }
+@keyframes pulse { 50% { transform: scale(1.05); } }
+.dual-question-img { width: 100px; height: 100px; margin: 8px auto; display: block; }
+.dual-question-img svg { width: 100%; height: 100%; stroke: var(--accent-dark); stroke-width: 3; fill: none; }
+.dual-question-text { font-size: 1.1em; font-weight: 800; text-align: center; margin: 8px 0; padding: 10px; background: var(--lighter); border-radius: 10px; }
+
+.instructions-box { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); border: 2px solid #c084fc; border-radius: 14px; padding: 15px; margin: 10px 0; }
+.instructions-box h3 { color: #6b21a8; margin-top: 0; }
+.instructions-box ul { list-style: none; padding: 0; }
+.instructions-box li { padding: 6px 0; border-bottom: 1px dashed rgba(107,33,168,0.2); font-size: 0.9em; }
+
+.result-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+@media(max-width: 600px) { .result-cards { grid-template-columns: 1fr; } }
+.result-card { background: var(--panel); border-radius: 16px; padding: 20px; text-align: center; box-shadow: 0 8px 25px var(--shadow); }
+.result-card.winner { border: 3px solid #a855f7; background: linear-gradient(135deg, #f3e8ff, #e9d5ff); }
+.result-card.loser { border: 3px solid #3b82f6; }
+.result-card .trophy { font-size: 4em; margin-bottom: 10px; }
+.result-card h3 { font-size: 1.3em; margin-bottom: 10px; }
+.result-card .score { font-size: 2em; font-weight: 900; margin: 10px 0; }
+.result-card.winner .score { color: #6b21a8; }
+
+.achievement-sky {
+  background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 40%, #f0f9ff 100%);
+  min-height: 450px;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 30px rgba(186, 230, 253, 0.5);
+}
+.achievement-sky h2 { color: #0c4a6e; text-align: center; margin-bottom: 20px; font-size: 1.8em; text-shadow: 0 2px 4px rgba(255,255,255,0.8); position: relative; z-index: 10; }
+.cloud { position: absolute; background: rgba(255, 255, 255, 0.85); border-radius: 100px; z-index: 1; filter: blur(1px); }
+.cloud::before, .cloud::after { content: ''; position: absolute; background: rgba(255, 255, 255, 0.85); border-radius: 100px; }
+.cloud-1 { width: 120px; height: 40px; top: 15%; left: -150px; animation: floatCloud 35s linear infinite; }
+.cloud-1::before { width: 60px; height: 60px; top: -30px; left: 20px; }
+.cloud-1::after { width: 80px; height: 50px; top: -20px; left: 50px; }
+.cloud-2 { width: 100px; height: 35px; top: 35%; left: -150px; animation: floatCloud 45s linear infinite; animation-delay: -15s; opacity: 0.7; }
+.cloud-2::before { width: 50px; height: 50px; top: -25px; left: 15px; }
+.cloud-2::after { width: 70px; height: 45px; top: -15px; left: 40px; }
+.cloud-3 { width: 140px; height: 45px; top: 55%; left: -150px; animation: floatCloud 55s linear infinite; animation-delay: -30s; opacity: 0.6; }
+.cloud-3::before { width: 70px; height: 60px; top: -35px; left: 25px; }
+.cloud-3::after { width: 90px; height: 55px; top: -25px; left: 60px; }
+@keyframes floatCloud { 0% { transform: translateX(0); } 100% { transform: translateX(calc(100vw + 300px)); } }
+.sun { position: absolute; top: 20px; left: 30px; width: 70px; height: 70px; background: radial-gradient(circle, #fde047 0%, #fbbf24 60%, transparent 70%); border-radius: 50%; box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); z-index: 1; animation: sunPulse 4s ease-in-out infinite; }
+@keyframes sunPulse { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.05); opacity: 1; } }
+.sky-stars { position: relative; min-height: 300px; z-index: 5; }
+.sky-star { position: absolute; font-size: 1.8em; animation: twinkle 2.5s infinite; filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8)); }
+@keyframes twinkle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(0.85); } }
+.achievement-count { text-align: center; color: #0c4a6e; font-size: 2em; font-weight: 900; margin-top: 20px; text-shadow: 0 2px 4px rgba(255,255,255,0.9); position: relative; z-index: 10; }
+
+.settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0; }
+.setting-card { background: var(--panel); border: 2px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+.setting-card h3 { margin-bottom: 10px; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 15px 0; }
+.stat-card { background: linear-gradient(135deg, var(--f3), var(--f2)); padding: 14px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 10px var(--shadow); }
+.stat-card .l { font-size: 0.85em; color: var(--muted); font-weight: 700; }
+.stat-card .v { font-size: 1.4em; font-weight: 900; margin-top: 4px; color: var(--accent-dark); }
+
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; animation: fade 0.3s; }
+.modal-box { background: #fff; padding: 25px; border-radius: 16px; max-width: 500px; width: 90%; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+.modal-box h3 { color: var(--accent-dark); margin-bottom: 15px; font-size: 1.3em; }
+
+.toast { position: fixed; bottom: 15px; right: 15px; background: var(--text); color: #fff; padding: 10px 18px; border-radius: 12px; font-weight: 700; font-size: 0.9em; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 999; opacity: 0; transform: translateY(20px); transition: 0.3s; }
+.toast.show { opacity: 1; transform: none; }
+
+select, input[type="text"] { width: 100%; padding: 10px; border: 2px solid var(--soft); border-radius: 10px; font-size: 1em; font-weight: 700; outline: none; transition: 0.3s; }
+select:focus, input[type="text"]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,58,237,0.1); }
+
+@media(max-width: 600px) {
+  .school-header h1 { font-size: 1.1em; }
+  .header-row-2 { flex-direction: column; align-items: center; }
+  main { padding: 10px; }
+  .tab { font-size: 0.65em; min-width: 70px; max-width: 90px; padding: 6px 6px; }
+}
+</style>
+</head>
+<body data-theme="purple">
+<div class="wrap">
+  <div class="school-header">
+    <div class="header-row-1">
+      <h1>✨ عالم الأشكال الرباعية ✨</h1>
+      <div class="meta-badge main-badge">🏫 المدرسة النموذجية للمتفوقين / إناث - الصف السابع</div>
+    </div>
+    <div class="header-row-2">
+      <div class="meta-badge">👩‍🏫 إشراف: المدرّسة فلك عاصي</div>
+      <div class="meta-badge">‍🎓 عمل الطالبات: تقى يونسو - ليان شعار - حنين الصالح - ماسة شيخ اسليم</div>
+      <div class="meta-badge">💻 إعداد إلكتروني: تقى يونسو</div>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <main id="main"></main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+var studentNames = ['ليندا شيخ ابراهيم', 'لمار شيخ اسليم', 'ليان سويد', 'أبرار الرحمون', 'لجين بيوش', 'ألين عبيد', 'حلا العلي', 'لانا منى', 'سلام المرعي', 'هدى', 'روان الصالح', 'يقين سرحان', 'جودي', 'علا', 'لامار حسان', 'لمار بركات', 'صبا', 'جنى عثمان', 'لجين الشحنة', 'سيلار التنو', 'ليليا حلي', 'ليليا زغل', 'فرح علي باشا', 'جنى بكور', 'نهى الشحاد'];
+var availableNames = studentNames.slice();
+var dualPlayers = { p1: 'اللاعب 1', p2: 'اللاعب 2' };
+var selectedPlayer = 1;
+var stars = 0;
+var shapesCompleted = 0;
+var challengesCompleted = 0;
+var current = 'intro';
+var gameState = {};
+
+var TABS = [['intro', '🏠 البداية'], ['concept_map', '🗺️ الخريطة'], ['rect', '📐 المستطيل'], ['rhombus', '💎 المعين'], ['square', '🟦 المربع'], ['para', '📏 متوازي الأضلاع'], ['solo_race', '⏱️ تحدي فردي'], ['dual_race', '⚔️ تحدي ثنائي'], ['achievements', '🌟 إنجازاتي'], ['students', '👥 المتسابقات'], ['settings', '⚙️ الإعدادات']];
+
+var CFG = {
+  rect: { name: 'المستطيل', em: '', target: 'اجعل كل الزوايا 90° والأضلاع المتقابلة متساوية', examples: ['🚪 الباب', ' شاشة الجوال', '📄 ورقة A4', '🪟 النافذة'], properties: ['كل الزوايا = 90°', 'الأضلاع المتقابلة متساوية', 'القطران متساويان', 'القطران متناصفان', 'المساحة = الطول × العرض'] },
+  rhombus: { name: 'المعين', em: '💎', target: 'اجعل كل الأضلاع متساوية', examples: ['🪁 طائرة ورقية', '♠️ شكل البستوني', '💎 الجوهرة', '🔷 المعين'], properties: ['كل الأضلاع متساوية', 'الزوايا المتقابلة متساوية', 'القطران متعامدان', 'المساحة = (ق1 × ق2) ÷ 2'] },
+  square: { name: 'المربع', em: '', target: 'اجعل كل الأضلاع متساوية وكل الزوايا 90°', examples: ['🎲 حجر النرد', '🟦 بلاطة', '♟️ مربع الشطرنج', '🖼️ إطار صورة'], properties: ['كل الأضلاع متساوية', 'كل الزوايا = 90°', 'القطران متساويان ومتعامدان', 'المساحة = الضلع × الضلع'] },
+  para: { name: 'متوازي الأضلاع', em: '📏', target: 'اجعل الأضلاع المتقابلة متساوية ومتوازية', examples: ['🏗️ هيكل مائل', '🪟 نافذة مائلة', '🛋️ وسادة', '🔷 شكل مائل'], properties: ['الأضلاع المتقابلة متساوية ومتوازية', 'الزوايا المتقابلة متساوية', 'القطران متناصفان', 'مجموع الزوايا المتجاورة = 180°', 'المساحة = القاعدة × الارتفاع'] }
+};
+
+var QUESTIONS = [
+  { q: "ما الشكل الذي كل زواياه 90°؟", svg: '<svg viewBox="0 0 100 100"><rect x="15" y="25" width="70" height="50"/></svg>', opts: ["مربع فقط", "مستطيل فقط", "مستطيل أو مربع"], ans: 2 },
+  { q: "في المعين، الأضلاع:", svg: '<svg viewBox="0 0 100 100"><polygon points="50,15 85,50 50,85 15,50"/></svg>', opts: ["متساوية", "مختلفة", "متقابلة فقط"], ans: 0 },
+  { q: "مجموع زوايا الرباعي:", svg: '<svg viewBox="0 0 100 100"><polygon points="20,30 80,20 90,80 10,70"/></svg>', opts: ["180°", "270°", "360°"], ans: 2 },
+  { q: "الشكل الذي ضلعان متوازيان فقط:", svg: '<svg viewBox="0 0 100 100"><polygon points="25,30 75,30 90,70 10,70"/></svg>', opts: ["متوازي أضلاع", "شبه منحرف", "معين"], ans: 1 },
+  { q: "محيط مربع ضلعه 5 سم:", svg: '<svg viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60"/></svg>', opts: ["15 سم", "20 سم", "25 سم"], ans: 1 },
+  { q: "قطرا المستطيل:", svg: '<svg viewBox="0 0 100 100"><rect x="15" y="25" width="70" height="50"/><line x1="15" y1="25" x2="85" y2="75" stroke-width="2"/><line x1="85" y1="25" x2="15" y2="75" stroke-width="2"/></svg>', opts: ["متعامدان", "متساويان", "غير متساويين"], ans: 1 },
+  { q: "مساحة مستطيل 4×6:", svg: '<svg viewBox="0 0 100 100"><rect x="15" y="30" width="70" height="40"/></svg>', opts: ["10", "20", "24"], ans: 2 },
+  { q: "قطرا المعين:", svg: '<svg viewBox="0 0 100 100"><polygon points="50,15 85,50 50,85 15,50"/><line x1="50" y1="15" x2="50" y2="85" stroke-width="2"/><line x1="15" y1="50" x2="85" y2="50" stroke-width="2"/></svg>', opts: ["متعامدان", "متساويان", "متوازيان"], ans: 0 }
+];
+
+function rad(d) { return d * Math.PI / 180; }
+function deg(r) { return r * 180 / Math.PI; }
+function dst(p, q) { return Math.hypot(p.x - q.x, p.y - q.y); }
+function el(id) { return document.getElementById(id); }
+
+function toast(msg) {
+  var t = el('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._t);
+  t._t = setTimeout(function() { t.classList.remove('show'); }, 2500);
+}
+
+function addStar(n) { stars += (n||1); updateStarsUI(); }
+
+function updateStarsUI() {
+  var els = document.querySelectorAll('.star-count');
+  for (var i = 0; i < els.length; i++) els[i].textContent = stars;
+  var statStars = el('stat-stars');
+  if (statStars) statStars.textContent = stars;
+}
+
+function updateStatsUI() {
+  var statStars = el('stat-stars');
+  if (statStars) statStars.textContent = stars;
+  var statShapes = el('stat-shapes');
+  if (statShapes) statShapes.textContent = shapesCompleted;
+  var statChallenges = el('stat-challenges');
+  if (statChallenges) statChallenges.textContent = challengesCompleted;
+}
+
+function shuffleArray(arr) {
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+
+function go(k) {
+  current = k;
+  if (k === 'students') { openStudentsModal(); return; }
+  var tabs = document.querySelectorAll('.tab');
+  for (var i = 0; i < tabs.length; i++) tabs[i].classList.toggle('active', tabs[i].dataset.k === k);
+  var secs = document.querySelectorAll('.sec');
+  for (var i = 0; i < secs.length; i++) secs[i].classList.toggle('active', secs[i].id === 'sec-' + k);
+  if (CFG[k]) setTimeout(function() { drawShape(k, 'svg-game-', true); }, 100);
+  if (k === 'achievements') renderAchievementSky();
+  if (k === 'settings') updateStatsUI();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function buildTabs() {
+  var html = '';
+  for (var i = 0; i < TABS.length; i++) {
+    html += '<div class="tab' + (i===0?' active':'') + '" data-k="' + TABS[i][0] + '" onclick="go(\'' + TABS[i][0] + '\')">' + TABS[i][1] + '</div>';
+  }
+  el('tabs').innerHTML = html;
+}
+
+function buildSections() {
+  var h = '';
+  h += '<div class="sec active" id="sec-intro">';
+  h += '<h2 class="section-title">🌟 أهلاً بك!</h2>';
+  h += '<div class="box"><p>الشكل الرباعي له <b>4 أضلاع</b> و<b>4 زوايا</b>، ومجموع زواياه <b>360°</b>.</p><p style="margin-top:8px">⭐ اجمع النجوم بإكمال التحديات!</p></div>';
+  h += '<div class="box" style="text-align:center"><h3>🏆 نجومك: <span class="star-count">0</span> ⭐</h3><div class="stars-bar">';
+  for (var i = 0; i < 10; i++) h += '<span class="star">⭐</span>';
+  h += '</div></div></div>';
+
+  h += '<div class="sec" id="sec-concept_map">';
+  h += '<h2 class="section-title">🗺️ خريطة الأشكال</h2>';
+  h += '<div class="box">اضغط على أي شكل للانتقال إلى صفحته التفصيلية!</div>';
+  h += '<div class="concept-map"><svg viewBox="0 0 800 580">';
+  h += '<defs><marker id="ah" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><polygon points="0 0, 12 5, 0 10" fill="var(--accent)"/></marker>';
+  h += '<linearGradient id="grad-general" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="var(--f1)"/><stop offset="100%" stop-color="var(--f3)"/></linearGradient>';
+  h += '<linearGradient id="grad-para" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="var(--f2)"/><stop offset="100%" stop-color="var(--f1)"/></linearGradient>';
+  h += '<linearGradient id="grad-rect" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#bfdbfe"/></linearGradient>';
+  h += '<linearGradient id="grad-rhombus" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fce7f3"/><stop offset="100%" stop-color="#fbcfe8"/></linearGradient>';
+  h += '<linearGradient id="grad-square" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#93c5fd"/></linearGradient></defs>';
+  h += '<g class="map-shape" onclick="go(\'intro\')"><polygon points="290,15 465,10 490,70 300,75" fill="url(#grad-general)" stroke="var(--accent-dark)" stroke-width="3" stroke-linejoin="round"/><text x="395" y="48" class="map-label">شكل رباعي</text></g>';
+  h += '<line x1="395" y1="78" x2="395" y2="128" class="map-line" marker-end="url(#ah)"/>';
+  h += '<text x="415" y="108" class="map-condition">+ أضلاع متقابلة متساوية ومتوازية</text>';
+  h += '<g class="map-shape" onclick="go(\'para\')"><polygon points="265,138 500,138 520,190 285,190" fill="url(#grad-para)" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/><text x="395" y="172" class="map-label">متوازي الأضلاع</text></g>';
+  h += '<line x1="395" y1="193" x2="200" y2="265" class="map-line" marker-end="url(#ah)"/>';
+  h += '<line x1="395" y1="193" x2="590" y2="265" class="map-line" marker-end="url(#ah)"/>';
+  h += '<text x="265" y="235" class="map-condition">+ كل الزوايا 90°</text>';
+  h += '<text x="505" y="235" class="map-condition">+ كل الأضلاع متساوية</text>';
+  h += '<g class="map-shape" onclick="go(\'rect\')"><rect x="100" y="268" width="190" height="95" fill="url(#grad-rect)" stroke="#3b82f6" stroke-width="3" stroke-linejoin="miter"/><text x="195" y="318" class="map-label">المستطيل</text></g>';
+  h += '<g class="map-shape" onclick="go(\'rhombus\')"><polygon points="655,268 735,315 655,363 575,315" fill="url(#grad-rhombus)" stroke="#db2777" stroke-width="3" stroke-linejoin="round"/><text x="655" y="320" class="map-label">المعين</text></g>';
+  h += '<line x1="290" y1="315" x2="360" y2="395" class="map-line" marker-end="url(#ah)"/>';
+  h += '<line x1="575" y1="315" x2="440" y2="395" class="map-line" marker-end="url(#ah)"/>';
+  h += '<text x="295" y="360" class="map-condition">+ أضلاع متساوية</text>';
+  h += '<text x="470" y="360" class="map-condition">+ زوايا 90°</text>';
+  h += '<g class="map-shape" onclick="go(\'square\')"><rect x="325" y="395" width="130" height="130" fill="url(#grad-square)" stroke="#3b82f6" stroke-width="3" stroke-linejoin="miter"/><text x="390" y="465" class="map-label" style="font-size:18px">المربع</text></g>';
+  h += '<text x="395" y="555" text-anchor="middle" fill="var(--muted)" font-size="14" font-weight="800">المربع = مستطيل + معين</text>';
+  h += '</svg></div></div>';
+
+  var keys = Object.keys(CFG);
+  for (var ki = 0; ki < keys.length; ki++) {
+    var key = keys[ki];
+    var c = CFG[key];
+    h += '<div class="sec" id="sec-' + key + '">';
+    h += '<h2 class="section-title">' + c.em + ' ' + c.name + '</h2>';
+    h += '<div class="box"><p>' + c.target + '.</p></div>';
+    h += '<div class="example-box"><h4>🌍 أمثلة من حياتنا:</h4><div class="examples">';
+    for (var ei = 0; ei < c.examples.length; ei++) h += '<div class="ex-item">' + c.examples[ei] + '</div>';
+    h += '</div></div>';
+    h += '<div class="properties-box"><h3> الخصائص:</h3><ul>';
+    for (var pi = 0; pi < c.properties.length; pi++) h += '<li>' + c.properties[pi] + '</li>';
+    h += '</ul></div>';
+    h += '<div class="box" style="border-right-color:var(--accent); background:linear-gradient(135deg,#f3e8ff,#e9d5ff)">';
+    h += '<h3>🎮 حوّل الشكل إلى ' + c.name + '</h3>';
+    h += '<div class="canvas"><svg id="svg-game-' + key + '" viewBox="0 0 600 380"></svg></div>';
+    h += '<div class="controls-grid">';
+    var sides = ['AB','BC','CD','DA'];
+    for (var si = 0; si < sides.length; si++) h += '<div class="field"><label>ضلع ' + sides[si] + '</label><input type="number" step="0.1" id="in-game-' + key + '-s' + si + '" onchange="manualEdit(\'' + key + '\',\'s\',' + si + ',this.value)"></div>';
+    var angles = ['A','B','C','D'];
+    for (var ai = 0; ai < angles.length; ai++) h += '<div class="field"><label>زاوية ' + angles[ai] + '</label><input type="number" step="1" id="in-game-' + key + '-g' + ai + '" onchange="manualEdit(\'' + key + '\',\'g\',' + ai + ',this.value)"></div>';
+    h += '</div>';
+    h += '<div id="status-game-' + key + '" class="shape-status normal">جاري الحساب...</div>';
+    h += '<div style="margin-top:10px;text-align:center">';
+    h += '<button class="btn success" onclick="checkTransform(\'' + key + '\')">✔ تحقق (+⭐)</button>';
+    h += '<button class="btn warning" onclick="resetToDefault(\'' + key + '\')">↺ إعادة</button>';
+    h += '<button class="btn ghost" onclick="randomShape(\'' + key + '\')">🎲 عشوائي</button>';
+    h += '<button class="btn help" onclick="helpRestore(\'' + key + '\')">💡 مساعدة</button>';
+    h += '</div></div></div>';
+  }
+
+  h += '<div class="sec" id="sec-solo_race">';
+  h += '<h2 class="section-title">⏱️ تحدي فردي (30 ثانية)</h2>';
+  h += '<div class="box" id="soloStart"><div style="text-align:center"><h3>اختبر معلوماتك!</h3><p style="margin:8px 0;color:var(--muted)">أجب على أكبر عدد من الأسئلة في 30 ثانية</p><button class="btn success" style="font-size:1.05em;padding:10px 28px" onclick="startSolo()">▶ ابدأ التحدي</button></div></div>';
+  h += '<div id="soloGame" style="display:none"><div style="text-align:center;margin-bottom:10px"><div class="dual-timer" id="soloTimer">30</div><div style="font-size:1.1em;font-weight:900">النقاط: <span id="soloScore">0</span> ⭐</div></div><div class="dual-question-img" id="soloImg"></div><div class="dual-question-text" id="soloQ"></div><div id="soloOpts" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px"></div></div></div>';
+
+  h += '<div class="sec" id="sec-dual_race">';
+  h += '<h2 class="section-title">⚔️ تحدي ثنائي (120 ثانية)</h2>';
+  h += '<div id="dualInstructions">';
+  h += '<div class="instructions-box"><h3>📋 قواعد المنافسة</h3><ul>';
+  h += '<li>🎯 الهدف: الإجابة على أكبر عدد من الأسئلة بشكل صحيح</li>';
+  h += '<li>👥 اللاعبات: لاعبتان على نفس الجهاز</li>';
+  h += '<li>⏱️ المدة: 120 ثانية (دقيقتان)</li>';
+  h += '<li>📱 التوزيع: اللاعب 1 يستخدم النصف الأيمن، اللاعب 2 يستخدم النصف الأيسر</li>';
+  h += '<li>⭐ النقاط: كل إجابة صحيحة = نجمة واحدة</li>';
+  h += '<li> الفائزة: من تجمع نجوم أكثر عند انتهاء الوقت</li>';
+  h += '</ul></div>';
+  h += '<div style="text-align:center;margin-top:15px"><button class="btn success" style="font-size:1.1em;padding:12px 35px" onclick="showDualStart()">فهمت! ابدأ المنافسة</button></div>';
+  h += '</div>';
+  h += '<div id="dualGame" style="display:none">';
+  h += '<div class="dual-header"><div style="text-align:center"><div style="font-size:0.85em;color:#9333ea;font-weight:700" id="p1name">اللاعب 1</div><div style="font-size:1.5em;font-weight:900;color:#9333ea" id="p1s">0</div></div><div class="dual-timer" id="dt">120</div><div style="text-align:center"><div style="font-size:0.85em;color:#a855f7;font-weight:700" id="p2name">اللاعب 2</div><div style="font-size:1.5em;font-weight:900;color:#a855f7" id="p2s">0</div></div></div>';
+  h += '<div class="dual-question-img" id="dimg"></div>';
+  h += '<div class="dual-question-text" id="dq"></div>';
+  h += '<div class="dual-split">';
+  h += '<div class="player-zone p1"><div class="zone-label" id="z1label">اللاعب 1</div><div class="zone-score" id="z1s">0 ⭐</div><div class="zone-opts" id="z1opts"></div></div>';
+  h += '<div class="player-zone p2"><div class="zone-label" id="z2label">اللاعب 2</div><div class="zone-score" id="z2s">0 ⭐</div><div class="zone-opts" id="z2opts"></div></div>';
+  h += '</div></div>';
+  h += '<div id="dualResult" style="display:none"></div>';
+  h += '</div>';
+
+  h += '<div class="sec" id="sec-achievements">';
+  h += '<h2 class="section-title">🌟 سماء إنجازاتي</h2>';
+  h += '<div class="achievement-sky" id="achievementSky"></div>';
+  h += '</div>';
+
+  h += '<div class="sec" id="sec-settings">';
+  h += '<h2 class="section-title">⚙️ الإعدادات</h2>';
+  h += '<div class="settings-grid">';
+  h += '<div class="setting-card"><h3>🎨 تغيير الثيم</h3><p style="margin:10px 0;color:var(--muted)">اختيار لون التطبيق المفضل</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><button class="btn" onclick="setTheme(\'purple\')" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">💎 بنفسجي</button><button class="btn" onclick="setTheme(\'pink\')" style="background:linear-gradient(135deg,#db2777,#f472b6)">🌸 وردي</button></div></div>';
+  h += '<div class="setting-card"><h3>🗑️ تصفير النجوم</h3><p style="margin:10px 0;color:var(--muted)">إعادة تعيين جميع النجوم إلى صفر</p><button class="btn danger" onclick="resetStars()">تصفير النجوم</button></div>';
+  h += '<div class="setting-card"><h3>🔄 تصفير التحديات</h3><p style="margin:10px 0;color:var(--muted)">إعادة تعيين عدد الأشكال المحولة والتحديات المكتملة إلى صفر</p><button class="btn warning" onclick="resetChallenges()">تصفير التحديات</button></div>';
+  h += '</div>';
+  h += '<h3>📊 الإحصائيات</h3>';
+  h += '<div class="stats-grid">';
+  h += '<div class="stat-card"><div class="l">مجموع النجوم</div><div class="v" id="stat-stars">0</div></div>';
+  h += '<div class="stat-card"><div class="l">أشكال محولة</div><div class="v" id="stat-shapes">0</div></div>';
+  h += '<div class="stat-card"><div class="l">تحديات مكتملة</div><div class="v" id="stat-challenges">0</div></div>';
+  h += '</div>';
+  h += '<div style="text-align:center;margin-top:20px;padding-top:15px;border-top:2px dashed var(--border)">';
+  h += '<button class="btn danger" onclick="resetAll()" style="font-size:1em;padding:12px 30px">🗑️ تصفير كل شيء</button>';
+  h += '</div></div>';
+
+  el('main').innerHTML = h;
+}
+
+function renderAchievementSky() {
+  var sky = el('achievementSky');
+  if (!sky) return;
+  var h = '<div class="sun"></div>';
+  h += '<div class="cloud cloud-1"></div><div class="cloud cloud-2"></div><div class="cloud cloud-3"></div>';
+  h += '<h2>🌟 سماء إنجازاتي 🌟</h2>';
+  h += '<div class="sky-stars" style="position:relative;min-height:300px">';
+  var starCount = Math.min(stars, 60);
+  for (var i = 0; i < starCount; i++) {
+    var x = Math.random() * 100;
+    var y = Math.random() * 70;
+    var delay = Math.random() * 2.5;
+    var size = 1.2 + Math.random() * 1.8;
+    var opacity = 0.7 + Math.random() * 0.3;
+    h += '<div class="sky-star" style="left:' + x + '%;top:' + y + '%;animation-delay:' + delay + 's;font-size:' + size + 'em;opacity:' + opacity + '">⭐</div>';
+  }
+  h += '</div>';
+  h += '<div class="achievement-count">لقد جمعتِ ' + stars + ' نجمة! </div>';
+  sky.innerHTML = h;
+}
+
+function getDefaultShape(key) {
+  if (key === 'square') return [{x:200,y:100},{x:400,y:100},{x:400,y:300},{x:200,y:300}];
+  if (key === 'rect') return [{x:150,y:120},{x:450,y:120},{x:450,y:280},{x:150,y:280}];
+  if (key === 'rhombus') return [{x:300,y:80},{x:450,y:190},{x:300,y:300},{x:150,y:190}];
+  if (key === 'para') return [{x:150,y:120},{x:400,y:120},{x:450,y:280},{x:200,y:280}];
+  return [{x:150,y:100},{x:450,y:100},{x:400,y:300},{x:200,y:300}];
+}
+
+function interior(p, prev, next) {
+  var v1x = prev.x - p.x, v1y = prev.y - p.y;
+  var v2x = next.x - p.x, v2y = next.y - p.y;
+  var dot = v1x * v2x + v1y * v2y;
+  var cross = v1x * v2y - v1y * v2x;
+  var d = deg(Math.atan2(Math.abs(cross), dot));
+  if (d > 180) d = 360 - d;
+  return d;
+}
+function anglesOf(P) { return [0,1,2,3].map(function(i) { return interior(P[i], P[(i+3)%4], P[(i+1)%4]); }); }
+
+function drawShape(key, prefix, isGame) {
+  var stateObj = gameState[key];
+  if (!stateObj || !stateObj.P) return;
+  var P = stateObj.P;
+  var svg = el(prefix + key);
+  if (!svg) return;
+  var cs = getComputedStyle(document.body);
+  var st = cs.getPropertyValue('--stroke');
+  var f1 = cs.getPropertyValue('--f1'), f3 = cs.getPropertyValue('--f3');
+  var s = '<defs><linearGradient id="g-' + key + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="' + f1 + '" stop-opacity=".7"/><stop offset="100%" stop-color="' + f3 + '" stop-opacity=".8"/></linearGradient></defs>';
+  if (isGame) {
+    for (var x = 40; x < 600; x += 40) s += '<line x1="' + x + '" y1="20" x2="' + x + '" y2="360" stroke="var(--border)" stroke-width="1" opacity="0.5"/>';
+    for (var y = 30; y < 380; y += 40) s += '<line x1="20" y1="' + y + '" x2="580" y2="' + y + '" stroke="var(--border)" stroke-width="1" opacity="0.5"/>';
+  }
+  s += '<polygon points="' + P.map(function(p) { return p.x + ',' + p.y; }).join(' ') + '" fill="url(#g-' + key + ')" stroke="' + st + '" stroke-width="3" stroke-linejoin="round"/>';
+  var sd = [dst(P[0],P[1]), dst(P[1],P[2]), dst(P[2],P[3]), dst(P[3],P[0])];
+  var an = anglesOf(P);
+  var pairs = [[0,1],[1,2],[2,3],[3,0]];
+  for (var i = 0; i < pairs.length; i++) {
+    var mx = (P[pairs[i][0]].x + P[pairs[i][1]].x) / 2;
+    var my = (P[pairs[i][0]].y + P[pairs[i][1]].y) / 2;
+    s += '<text class="smeasure" x="' + mx + '" y="' + (my-8) + '" text-anchor="middle">' + sd[i].toFixed(1) + '</text>';
+  }
+  var off = [[-38,28],[38,28],[38,-18],[-38,-18]];
+  for (var i = 0; i < an.length; i++) s += '<text class="alabel" x="' + (P[i].x+off[i][0]) + '" y="' + (P[i].y+off[i][1]) + '" text-anchor="middle">' + 'ABCD'[i] + '=' + an[i].toFixed(0) + '°</text>';
+  for (var i = 0; i < P.length; i++) {
+    s += '<circle class="pt" cx="' + P[i].x + '" cy="' + P[i].y + '" r="10" fill="' + st + '" data-k="' + key + '" data-i="' + i + '"/>';
+    s += '<text class="vlabel" x="' + (P[i].x+(i<2?-18:14)) + '" y="' + (P[i].y+(i%2?22:-12)) + '">' + 'ABCD'[i] + '</text>';
+  }
+  svg.innerHTML = s;
+  if (isGame) { updateInputs(key, P); updateBadge(key, P); }
+}
+
+function updateInputs(key, P) {
+  var sd = [dst(P[0],P[1]), dst(P[1],P[2]), dst(P[2],P[3]), dst(P[3],P[0])];
+  var an = anglesOf(P);
+  for (var i = 0; i < sd.length; i++) { var inp = el('in-game-'+key+'-s'+i); if (inp) inp.value = sd[i].toFixed(1); }
+  for (var i = 0; i < an.length; i++) { var inp = el('in-game-'+key+'-g'+i); if (inp) inp.value = an[i].toFixed(0); }
+}
+
+function updateBadge(key, P) {
+  var sd = [dst(P[0],P[1]), dst(P[1],P[2]), dst(P[2],P[3]), dst(P[3],P[0])];
+  var an = anglesOf(P);
+  var tol = 0.5;
+  var allSidesEq = Math.max.apply(null, sd) - Math.min.apply(null, sd) <= tol;
+  var oppSidesEq = Math.abs(sd[0]-sd[2]) <= tol && Math.abs(sd[1]-sd[3]) <= tol;
+  var all90 = an.every(function(a) { return Math.abs(a-90) <= tol; });
+  var status = { name: "⚠️ شكل رباعي عام", type: "fail" };
+  if (all90 && allSidesEq) status = { name: "🟦 مربع ✓", type: "success" };
+  else if (all90 && oppSidesEq) status = { name: "📐 مستطيل ✓", type: "success" };
+  else if (allSidesEq) status = { name: "💎 معين ✓", type: "success" };
+  else if (oppSidesEq) status = { name: "📏 متوازي أضلاع", type: "normal" };
+  var badge = el('status-game-'+key);
+  if (badge) { badge.textContent = status.name; badge.className = 'shape-status ' + status.type; }
+}
+
+var drag = null;
+document.addEventListener('pointerdown', function(e) {
+  var t = e.target.closest('.pt');
+  if (!t) return;
+  drag = { k: t.dataset.k, i: +t.dataset.i };
+  e.preventDefault();
+});
+document.addEventListener('pointermove', function(e) {
+  if (!drag) return;
+  var svg = el('svg-game-' + drag.k);
+  if (!svg) return;
+  var r = svg.getBoundingClientRect();
+  var mx = (e.clientX - r.left) * 600 / r.width;
+  var my = (e.clientY - r.top) * 380 / r.height;
+  var P = gameState[drag.k].P;
+  var gs = 20;
+  var snapX = Math.round(mx/gs)*gs;
+  var snapY = Math.round(my/gs)*gs;
+  var useSnap = Math.abs(mx-snapX)<10 && Math.abs(my-snapY)<10;
+  P[drag.i].x = Math.max(20, Math.min(580, useSnap?snapX:mx));
+  P[drag.i].y = Math.max(20, Math.min(360, useSnap?snapY:my));
+  drawShape(drag.k, 'svg-game-', true);
+});
+document.addEventListener('pointerup', function() { drag = null; });
+document.addEventListener('pointercancel', function() { drag = null; });
+
+function manualEdit(key, type, idx, val) {
+  var v = parseFloat(val);
+  if (!isFinite(v) || v <= 0) return;
+  var P = gameState[key].P;
+  if (type === 's') {
+    var i = idx, j = (idx+1)%4;
+    var dx = P[j].x-P[i].x, dy = P[j].y-P[i].y;
+    var len = Math.hypot(dx,dy);
+    if (len > 0.01) { var r = v/len; P[j].x = P[i].x+dx*r; P[j].y = P[i].y+dy*r; }
+  } else if (type === 'g') {
+    var i = idx, prev = (i+3)%4, next = (i+1)%4;
+    var angPrev = Math.atan2(P[prev].y-P[i].y, P[prev].x-P[i].x);
+    var newAngle = angPrev - rad(v);
+    var dist = dst(P[i], P[next]);
+    P[next].x = P[i].x + Math.cos(newAngle)*dist;
+    P[next].y = P[i].y + Math.sin(newAngle)*dist;
+  }
+  drawShape(key, 'svg-game-', true);
+}
+
+function resetToDefault(key) {
+  var defaultP = getDefaultShape(key).map(function(p) { return {x:p.x,y:p.y}; });
+  gameState[key].P = defaultP;
+  gameState[key].saved = defaultP.map(function(p) { return {x:p.x,y:p.y}; });
+  drawShape(key, 'svg-game-', true);
+  toast('↺ تم العودة للشكل النموذجي: ' + CFG[key].name);
+}
+
+function randomShape(key) {
+  gameState[key].P = [{x:150+Math.random()*80, y:100+Math.random()*40}, {x:400+Math.random()*80, y:100+Math.random()*40}, {x:400+Math.random()*80, y:250+Math.random()*80}, {x:150+Math.random()*80, y:250+Math.random()*80}];
+  gameState[key].saved = gameState[key].P.map(function(p) { return {x:p.x,y:p.y}; });
+  drawShape(key, 'svg-game-', true);
+  toast('🎲 شكل جديد! اضغط 💡 مساعدة للعودة');
+}
+
+function helpRestore(key) {
+  var state = gameState[key];
+  var P = state.P;
+  var sd = [dst(P[0],P[1]), dst(P[1],P[2]), dst(P[2],P[3]), dst(P[3],P[0])];
+  var an = anglesOf(P);
+  var tol = 0.5;
+  var hint = '';
+  if (key === 'rect') {
+    var wrongAngles = an.filter(function(a) { return Math.abs(a-90) > tol; }).length;
+    var oppEq = Math.abs(sd[0]-sd[2]) <= tol && Math.abs(sd[1]-sd[3]) <= tol;
+    if (wrongAngles > 0) hint = 'الخطوة 1: اسحب النقاط حتى تصبح كل الزوايا 90° (الآن ' + wrongAngles + ' زوايا غير صحيحة)';
+    else if (!oppEq) hint = 'الخطوة 2: اجعل الأضلاع المتقابلة متساوية (AB=CD و BC=DA)';
+    else hint = 'الشكل جاهز! اضغط "تحقق" لتربح نجمة ⭐';
+  } else if (key === 'rhombus') {
+    var maxDiff = Math.max.apply(null, sd) - Math.min.apply(null, sd);
+    if (maxDiff > tol) hint = 'اجعل كل الأضلاع متساوية الطول (الفرق الحالي: ' + maxDiff.toFixed(1) + ' سم)';
+    else hint = 'الشكل جاهز! اضغط "تحقق" لتربح نجمة ⭐';
+  } else if (key === 'square') {
+    var wrongAngles = an.filter(function(a) { return Math.abs(a-90) > tol; }).length;
+    var maxDiff = Math.max.apply(null, sd) - Math.min.apply(null, sd);
+    if (wrongAngles > 0 && maxDiff > tol) hint = 'ابدأ بتسوية الأضلاع أولاً، ثم اجعل الزوايا 90°';
+    else if (wrongAngles > 0) hint = 'الأضلاع متساوية ✓ الآن اجعل الزوايا 90°';
+    else if (maxDiff > tol) hint = 'الزوايا صحيحة ✓ الآن سوِّ الأضلاع';
+    else hint = 'الشكل جاهز! اضغط "تحقق" لتربح نجمة ⭐';
+  } else if (key === 'para') {
+    var diff1 = Math.abs(sd[0]-sd[2]);
+    var diff2 = Math.abs(sd[1]-sd[3]);
+    if (diff1 > tol || diff2 > tol) hint = 'اجعل الأضلاع المتقابلة متساوية (AB=CD و BC=DA)';
+    else hint = 'الشكل جاهز! اضغط "تحقق" لتربح نجمة ⭐';
+  }
+  showHelpModal(key, hint);
+}
+
+function showHelpModal(key, hint) {
+  var modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.innerHTML = '<div class="modal-box"><h3>💡 مساعدة - ' + CFG[key].name + '</h3><p style="background:var(--lighter);padding:10px;border-radius:10px;margin:10px 0">' + hint + '</p><p style="font-size:0.9em;color:var(--muted)">هل تريدين إعادة الشكل لما كان عليه قبل التعديل؟</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><button class="btn help" id="btn-restore">↺ نعم، أعيد الشكل</button><button class="btn ghost" id="btn-close">لا، سأكمل</button></div></div>';
+  document.body.appendChild(modal);
+  modal.querySelector('#btn-restore').addEventListener('click', function() {
+    var state = gameState[key];
+    if (state && state.saved) {
+      state.P = state.saved.map(function(p) { return {x:p.x,y:p.y}; });
+      drawShape(key, 'svg-game-', true);
+      toast('💡 تم إعادة الشكل!');
+    }
+    modal.remove();
+  });
+  modal.querySelector('#btn-close').addEventListener('click', function() { modal.remove(); });
+  modal.addEventListener('click', function(e) { if (e.target === modal) modal.remove(); });
+}
+
+function checkTransform(key) {
+  var P = gameState[key].P;
+  var sd = [dst(P[0],P[1]), dst(P[1],P[2]), dst(P[2],P[3]), dst(P[3],P[0])];
+  var an = anglesOf(P);
+  var tol = 0.5;
+  var allSidesEq = Math.max.apply(null, sd) - Math.min.apply(null, sd) <= tol;
+  var oppSidesEq = Math.abs(sd[0]-sd[2]) <= tol && Math.abs(sd[1]-sd[3]) <= tol;
+  var all90 = an.every(function(a) { return Math.abs(a-90) <= tol; });
+  var success = false;
+  if (key === 'rect') success = all90 && oppSidesEq;
+  else if (key === 'rhombus') success = allSidesEq;
+  else if (key === 'square') success = all90 && allSidesEq;
+  else if (key === 'para') success = oppSidesEq;
+  if (success) {
+    shapesCompleted++;
+    addStar();
+    toast(' أحسنت! نجمة جديدة ⭐ (أشكال محولة: ' + shapesCompleted + ')');
+    updateStatsUI();
+  } else {
+    toast('⚠️ لم تكتمل الشروط بعد. اضغط 💡 مساعدة!');
+  }
+}
+
+var solo = { left: 30, timer: null, score: 0, q: null, active: false, queue: [] };
+function startSolo() {
+  el('soloStart').style.display = 'none';
+  el('soloGame').style.display = 'block';
+  solo.active = true; solo.left = 30; solo.score = 0;
+  solo.queue = shuffleArray(QUESTIONS);
+  el('soloScore').textContent = '0';
+  el('soloTimer').classList.remove('urgent');
+  nextSoloQ();
+  solo.timer = setInterval(function() {
+    solo.left--;
+    el('soloTimer').textContent = solo.left;
+    if (solo.left <= 10) el('soloTimer').classList.add('urgent');
+    if (solo.left <= 0) { clearInterval(solo.timer); endSolo(); }
+  }, 1000);
+}
+function nextSoloQ() {
+  if (!solo.active) return;
+  if (solo.queue.length === 0) solo.queue = shuffleArray(QUESTIONS);
+  solo.q = solo.queue.pop();
+  el('soloImg').innerHTML = solo.q.svg;
+  el('soloQ').textContent = solo.q.q;
+  var html = '';
+  var letters = ['أ','ب','ج'];
+  for (var i = 0; i < solo.q.opts.length; i++) {
+    html += '<div class="zone-opt" onclick="answerSolo('+i+',this)" style="background:#fff;border:2px solid var(--soft);border-radius:10px;padding:10px;cursor:pointer;font-weight:700;text-align:center">'+letters[i]+') '+solo.q.opts[i]+'</div>';
+  }
+  el('soloOpts').innerHTML = html;
+}
+function answerSolo(idx, node) {
+  if (!solo.active) return;
+  var ok = idx === solo.q.ans;
+  var opts = el('soloOpts').children;
+  for (var i = 0; i < opts.length; i++) {
+    opts[i].style.pointerEvents = 'none';
+    if (i === solo.q.ans) opts[i].style.background = '#a7f3d0';
+  }
+  if (ok) { solo.score++; el('soloScore').textContent = solo.score; }
+  else { node.style.background = '#fecaca'; }
+  setTimeout(function() { if (solo.active) nextSoloQ(); }, 800);
+}
+function endSolo() {
+  solo.active = false;
+  clearInterval(solo.timer);
+  challengesCompleted++;
+  updateStatsUI();
+  el('soloQ').innerHTML = '<h3>⏰ انتهى الوقت! جمعتِ ' + solo.score + ' ⭐</h3>';
+  el('soloOpts').innerHTML = '<button class="btn success" onclick="resetSolo()" style="font-size:1.05em;padding:10px 28px">🔄 تحدي جديد</button>';
+  el('soloImg').innerHTML = '';
+  addStar(solo.score);
+}
+function resetSolo() {
+  el('soloStart').style.display = 'block';
+  el('soloGame').style.display = 'none';
+}
+
+function showDualStart() {
+  el('dualInstructions').style.display = 'none';
+  openPlayerSelectionModal(1);
+}
+
+function openPlayerSelectionModal(playerNum) {
+  selectedPlayer = playerNum;
+  if (availableNames.length === 0) {
+    availableNames = studentNames.slice();
+    toast('🔄 تم إعادة تدوير الأسماء!');
+  }
+  var modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.id = 'playerModal';
+  var optionsHTML = '';
+  for (var i = 0; i < availableNames.length; i++) {
+    optionsHTML += '<option value="' + availableNames[i] + '">' + availableNames[i] + '</option>';
+  }
+  modal.innerHTML = '<div class="modal-box"><h3>🎯 اختيار ' + (playerNum === 1 ? 'المتسابقة الأولى' : 'المتسابقة الثانية') + '</h3><p>اخترِ اسم المتسابقة من القائمة أو اضغطي "اختيار عشوائي"</p><div style="margin:20px 0"><label style="display:block;font-weight:700;margin-bottom:8px;color:var(--accent-dark)">الاسم:</label><select id="playerNameSelect">' + optionsHTML + '</select></div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn help" onclick="selectRandomName()">🎲 اختيار عشوائي</button><button class="btn success" onclick="confirmPlayerSelection()">✔ تأكيد</button><button class="btn ghost" onclick="closePlayerModal()">✖ إلغاء</button></div><div style="margin-top:15px;padding-top:15px;border-top:1px solid var(--border)"><button class="btn ghost" style="font-size:0.85em" onclick="openNameManagerFromPlayerModal()">⚙️ إدارة الأسماء</button></div></div>';
+  document.body.appendChild(modal);
+}
+
+function selectRandomName() {
+  if (availableNames.length === 0) availableNames = studentNames.slice();
+  var randomIndex = Math.floor(Math.random() * availableNames.length);
+  var select = el('playerNameSelect');
+  if (select) {
+    select.value = availableNames[randomIndex];
+    select.style.background = 'var(--lighter)';
+    setTimeout(function() { select.style.background = '#fff'; }, 300);
+  }
+}
+
+function confirmPlayerSelection() {
+  var select = el('playerNameSelect');
+  if (!select || !select.value) { toast('⚠️ يرجى اختيار اسم!'); return; }
+  var selectedName = select.value;
+  var index = availableNames.indexOf(selectedName);
+  if (index > -1) availableNames.splice(index, 1);
+  if (selectedPlayer === 1) {
+    dualPlayers.p1 = selectedName;
+    closePlayerModal();
+    setTimeout(function() { openPlayerSelectionModal(2); }, 300);
+  } else {
+    dualPlayers.p2 = selectedName;
+    closePlayerModal();
+    setTimeout(function() { startDual(); }, 300);
+  }
+}
+
+function closePlayerModal() { var modal = el('playerModal'); if (modal) modal.remove(); }
+function openNameManagerFromPlayerModal() { closePlayerModal(); setTimeout(function() { openNameManager(); }, 300); }
+
+function openNameManager() {
+  var modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.id = 'nameManagerModal';
+  var namesHTML = '';
+  for (var i = 0; i < studentNames.length; i++) {
+    namesHTML += '<div style="display:flex;gap:8px;margin:8px 0;align-items:center"><input type="text" value="' + studentNames[i] + '" id="name-' + i + '" style="flex:1"><button class="btn danger" style="padding:6px 12px;font-size:0.8em" onclick="removeName(' + i + ')">🗑️</button></div>';
+  }
+  modal.innerHTML = '<div class="modal-box" style="max-width:600px;max-height:80vh;overflow-y:auto"><h3>⚙️ إدارة قائمة الأسماء</h3><p>يمكنكِ تعديل أو حذف الأسماء، أو إضافة أسماء جديدة</p><div id="namesList" style="margin:15px 0">' + namesHTML + '</div><div style="display:flex;gap:8px;margin:15px 0"><input type="text" id="newNameInput" placeholder="اسم جديد..."><button class="btn success" onclick="addNewName()">➕ إضافة</button></div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn success" onclick="saveNames()">💾 حفظ والعودة</button><button class="btn ghost" onclick="closeNameManager()">✖ إلغاء</button></div></div>';
+  document.body.appendChild(modal);
+}
+
+function removeName(index) { if (confirm('هل أنتِ متأكدة من حذف هذا الاسم؟')) { studentNames.splice(index, 1); openNameManager(); } }
+function addNewName() { var input = el('newNameInput'); if (input && input.value.trim()) { studentNames.push(input.value.trim()); input.value = ''; openNameManager(); toast('✅ تمت إضافة الاسم!'); } else { toast('⚠️ يرجى كتابة اسم!'); } }
+function saveNames() { studentNames = []; var inputs = document.querySelectorAll('#namesList input[type="text"]'); for (var i = 0; i < inputs.length; i++) { if (inputs[i].value.trim()) studentNames.push(inputs[i].value.trim()); } availableNames = studentNames.slice(); closeNameManager(); toast('✅ تم حفظ الأسماء!'); }
+function closeNameManager() { var modal = el('nameManagerModal'); if (modal) modal.remove(); }
+
+function openStudentsModal() {
+  if (availableNames.length === 0) availableNames = studentNames.slice();
+  var modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.id = 'studentsModal';
+  var listHTML = '';
+  for (var i = 0; i < availableNames.length; i++) {
+    listHTML += '<div style="padding:10px;margin:6px 0;background:var(--f3);border-radius:8px;font-weight:700;display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border)"><span>' + availableNames[i] + '</span><span style="font-size:0.8em;color:#6b21a8">✅ متاحة</span></div>';
+  }
+  var usedNames = studentNames.filter(function(n) { return availableNames.indexOf(n) === -1; });
+  var usedHTML = '';
+  for (var i = 0; i < usedNames.length; i++) {
+    usedHTML += '<div style="padding:10px;margin:6px 0;background:#faf5ff;border-radius:8px;font-weight:700;display:flex;justify-content:space-between;align-items:center;opacity:0.7;border:1px solid #e9d5ff"><span>' + usedNames[i] + '</span><span style="font-size:0.8em;color:#a855f7">🔒 مستخدمة</span></div>';
+  }
+  modal.innerHTML = '<div class="modal-box" style="max-width:600px;max-height:85vh;overflow-y:auto"><h3>👥 قائمة المتسابقات</h3><p style="margin-bottom:15px">إجمالي الأسماء: <b>' + studentNames.length + '</b> | المتاحة: <b style="color:#6b21a8">' + availableNames.length + '</b> | المستخدمة: <b style="color:#a855f7">' + usedNames.length + '</b></p><div style="background:#f3e8ff;padding:12px;border-radius:10px;margin-bottom:15px;border:1px solid #e9d5ff"><h4 style="color:#6b21a8;margin-bottom:8px">✅ الأسماء المتاحة:</h4>' + (listHTML || '<p style="color:var(--muted);text-align:center">لا توجد أسماء متاحة!</p>') + '</div>' + (usedHTML ? '<div style="background:#faf5ff;padding:12px;border-radius:10px;margin-bottom:15px;border:1px solid #e9d5ff"><h4 style="color:#a855f7;margin-bottom:8px">🔒 الأسماء المستخدمة:</h4>' + usedHTML + '</div>' : '') + '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px;padding-top:15px;border-top:1px solid var(--border)"><button class="btn help" onclick="resetAllNames()">🔄 إعادة تدوير كل الأسماء</button><button class="btn ghost" onclick="openNameManagerFromModal()">⚙️ إدارة الأسماء</button><button class="btn success" onclick="closeStudentsModal()">✔ إغلاق</button></div></div>';
+  document.body.appendChild(modal);
+}
+
+function resetAllNames() { availableNames = studentNames.slice(); closeStudentsModal(); setTimeout(function() { openStudentsModal(); }, 300); toast('🔄 تم إعادة تدوير جميع الأسماء!'); }
+function openNameManagerFromModal() { closeStudentsModal(); setTimeout(function() { openNameManager(); }, 300); }
+function closeStudentsModal() { var modal = el('studentsModal'); if (modal) modal.remove(); }
+
+var dual = { left: 120, timer: null, p1: 0, p2: 0, q: null, active: false, answered: [false, false], queue: [] };
+
+function startDual() {
+  el('p1name').textContent = dualPlayers.p1;
+  el('p2name').textContent = dualPlayers.p2;
+  el('z1label').textContent = dualPlayers.p1;
+  el('z2label').textContent = dualPlayers.p2;
+  el('dualGame').style.display = 'block';
+  el('dualResult').style.display = 'none';
+  dual.active = true; dual.left = 120; dual.p1 = 0; dual.p2 = 0;
+  dual.queue = shuffleArray(QUESTIONS);
+  el('dt').classList.remove('urgent');
+  updateDualUI();
+  nextDualQ();
+  dual.timer = setInterval(function() {
+    dual.left--;
+    el('dt').textContent = dual.left;
+    if (dual.left <= 10) el('dt').classList.add('urgent');
+    if (dual.left <= 0) { clearInterval(dual.timer); endDual(); }
+  }, 1000);
+}
+
+function updateDualUI() {
+  el('p1s').textContent = dual.p1;
+  el('p2s').textContent = dual.p2;
+  el('z1s').textContent = dual.p1 + ' ⭐';
+  el('z2s').textContent = dual.p2 + ' ⭐';
+}
+
+function nextDualQ() {
+  if (!dual.active) return;
+  if (dual.queue.length === 0) dual.queue = shuffleArray(QUESTIONS);
+  dual.q = dual.queue.pop();
+  dual.answered = [false, false];
+  el('dimg').innerHTML = dual.q.svg;
+  el('dq').textContent = dual.q.q;
+  var z1 = el('z1opts');
+  var z2 = el('z2opts');
+  z1.innerHTML = '';
+  z2.innerHTML = '';
+  var letters = ['أ','ب','ج'];
+  for (var i = 0; i < dual.q.opts.length; i++) {
+    (function(idx) {
+      var opt1 = document.createElement('div');
+      opt1.className = 'zone-opt';
+      opt1.textContent = letters[idx] + ') ' + dual.q.opts[idx];
+      opt1.addEventListener('click', function() { answerDual(1, idx, opt1); });
+      z1.appendChild(opt1);
+      var opt2 = document.createElement('div');
+      opt2.className = 'zone-opt';
+      opt2.textContent = letters[idx] + ') ' + dual.q.opts[idx];
+      opt2.addEventListener('click', function() { answerDual(2, idx, opt2); });
+      z2.appendChild(opt2);
+    })(i);
+  }
+}
+
+function answerDual(player, idx, node) {
+  if (!dual.active || node.classList.contains('disabled')) return;
+  var opts = player === 1 ? el('z1opts').children : el('z2opts').children;
+  var playerName = player === 1 ? dualPlayers.p1 : dualPlayers.p2;
+  if (idx === dual.q.ans) {
+    node.classList.add('correct');
+    for (var i = 0; i < opts.length; i++) opts[i].classList.add('disabled');
+    if (player === 1) dual.p1++; else dual.p2++;
+    toast('⭐ ' + playerName + ' أجابت صح!');
+    updateDualUI();
+    setTimeout(function() { if (dual.active) nextDualQ(); }, 800);
+  } else {
+    node.classList.add('bad');
+    node.classList.add('disabled');
+    toast('❌ ' + playerName + ' أجابت خطأ! حاولي خياراً آخر');
+    updateDualUI();
+    var remaining = 0;
+    for (var i = 0; i < opts.length; i++) {
+      if (!opts[i].classList.contains('disabled')) remaining++;
+    }
+    if (remaining <= 1) {
+      for (var i = 0; i < opts.length; i++) {
+        if (i === dual.q.ans) { opts[i].classList.add('correct'); opts[i].classList.add('disabled'); }
+      }
+      toast('💡 الإجابة الصحيحة: ' + dual.q.opts[dual.q.ans]);
+      setTimeout(function() { if (dual.active) nextDualQ(); }, 1200);
+    }
+  }
+}
+
+function endDual() {
+  dual.active = false;
+  clearInterval(dual.timer);
+  challengesCompleted++;
+  updateStatsUI();
+  el('dualGame').style.display = 'none';
+  el('dualResult').style.display = 'block';
+  var resultHTML = '<h2 style="text-align:center;margin-bottom:20px">🏆 نتائج المنافسة 🏆</h2>';
+  resultHTML += '<div class="result-cards">';
+  if (dual.p1 > dual.p2) {
+    resultHTML += '<div class="result-card winner"><div class="trophy">🏆</div><h3>درع التميز</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p1 + '</p><div class="score">' + dual.p1 + ' ⭐</div><p>أحسنتِ! أداء متميز 🌟</p></div>';
+    resultHTML += '<div class="result-card loser"><div class="trophy">📜</div><h3>شهادة شكر وتقدير</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p2 + '</p><div class="score">' + dual.p2 + ' ⭐</div><p>شكراً لمشاركتكِ! 💪</p></div>';
+  } else if (dual.p2 > dual.p1) {
+    resultHTML += '<div class="result-card loser"><div class="trophy">📜</div><h3>شهادة شكر وتقدير</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p1 + '</p><div class="score">' + dual.p1 + ' ⭐</div><p>شكراً لمشاركتكِ! 💪</p></div>';
+    resultHTML += '<div class="result-card winner"><div class="trophy">🏆</div><h3>درع التميز</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p2 + '</p><div class="score">' + dual.p2 + ' ⭐</div><p>أحسنتِ! أداء متميز </p></div>';
+  } else {
+    resultHTML += '<div class="result-card winner"><div class="trophy">🤝</div><h3>تعادل!</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p1 + ' و ' + dualPlayers.p2 + '</p><div class="score">' + dual.p1 + ' ⭐</div><p>أداء متساوي ومتميز! 🌟</p></div>';
+    resultHTML += '<div class="result-card winner"><div class="trophy">🤝</div><h3>تعادل!</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p1 + ' و ' + dualPlayers.p2 + '</p><div class="score">' + dual.p2 + ' ⭐</div><p>أداء متساوي ومتميز! 🌟</p></div>';
+  }
+  resultHTML += '</div>';
+  resultHTML += '<div style="text-align:center;margin-top:20px"><button class="btn success" onclick="resetDual()" style="font-size:1.1em;padding:12px 30px">🔄 تحدي ثنائي جديد</button></div>';
+  el('dualResult').innerHTML = resultHTML;
+  addStar(dual.p1 + dual.p2);
+}
+
+function resetDual() {
+  dual.active = false;
+  clearInterval(dual.timer);
+  dual.left = 120; dual.p1 = 0; dual.p2 = 0;
+  dual.queue = []; dual.answered = [false, false];
+  availableNames = studentNames.slice();
+  el('dualResult').style.display = 'none';
+  el('dualGame').style.display = 'none';
+  el('dualInstructions').style.display = 'block';
+  el('dt').textContent = '120';
+  el('dt').classList.remove('urgent');
+  updateDualUI();
+  toast('🔄 تم إعادة تهيئة المنافسة!');
+}
+
+function setTheme(t) {
+  document.body.dataset.theme = t;
+  var keys = Object.keys(CFG);
+  for (var i = 0; i < keys.length; i++) drawShape(keys[i], 'svg-game-', true);
+  toast('🎨 تم تغيير الثيم إلى: ' + (t === 'purple' ? 'بنفسجي' : 'وردي'));
+}
+
+function resetStars() {
+  if (confirm('هل أنتِ متأكدة من تصفير جميع النجوم؟')) {
+    stars = 0;
+    updateStarsUI();
+    toast('️ تم تصفير النجوم');
+  }
+}
+
+function resetChallenges() {
+  if (confirm('هل أنتِ متأكدة من تصفير جميع التحديات؟\n\nسيتم إعادة:\n• عدد الأشكال المحولة إلى 0\n• عدد التحديات المكتملة إلى 0\n\n(لن يتم تصفير النجوم)')) {
+    shapesCompleted = 0;
+    challengesCompleted = 0;
+    updateStatsUI();
+    toast('🔄 تم تصفير التحديات!');
+  }
+}
+
+function resetAll() {
+  if (confirm('⚠️ تحذير: سيتم تصفير كل شيء!\n\n• النجوم → 0\n• الأشكال المحولة → 0\n• التحديات المكتملة → 0\n\nهل أنتِ متأكدة؟')) {
+    stars = 0;
+    shapesCompleted = 0;
+    challengesCompleted = 0;
+    updateStarsUI();
+    updateStatsUI();
+    toast('🗑️ تم تصفير كل شيء!');
+  }
+}
+
+buildTabs();
+buildSections();
+
+var keys = Object.keys(CFG);
+for (var i = 0; i < keys.length; i++) {
+  var k = keys[i];
+  var initialP = getDefaultShape(k).map(function(p) { return {x:p.x,y:p.y}; });
+  gameState[k] = { P: initialP, saved: initialP.map(function(p) { return {x:p.x,y:p.y}; }) };
+  drawShape(k, 'svg-game-', true);
+}
+
+setTimeout(function() {
+  var shapes = document.querySelectorAll('.map-shape');
+  for (var i = 0; i < shapes.length; i++) {
+    (function(shape) {
+      shape.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = shape.dataset.target;
+        if (target) go(target);
+      });
+    })(shapes[i]);
+  }
+}, 100);
+
+updateStarsUI();
+updateStatsUI();
+</script>
+</body>
+</html>
