@@ -33,14 +33,7 @@
 body { background: var(--bg); min-height: 100vh; padding: 12px; color: var(--text); transition: 0.5s; font-size: 1em; }
 .wrap { max-width: 1100px; margin: auto; background: var(--card); border-radius: 20px; overflow: hidden; box-shadow: 0 15px 50px var(--shadow); }
 
-.school-header {
-  background: var(--header-bg);
-  padding: 22px 18px;
-  text-align: center;
-  color: #fff;
-  border-bottom: 4px solid rgba(255,255,255,0.3);
-  box-shadow: 0 4px 20px rgba(107, 33, 168, 0.2);
-}
+.school-header { background: var(--header-bg); padding: 22px 18px; text-align: center; color: #fff; border-bottom: 4px solid rgba(255,255,255,0.3); box-shadow: 0 4px 20px rgba(107, 33, 168, 0.2); }
 .header-row-1 { margin-bottom: 14px; }
 .school-header h1 { font-size: 1.7em; font-weight: 900; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.15); letter-spacing: 0.5px; }
 .main-badge { background: rgba(255,255,255,0.3); font-size: 0.95em; padding: 6px 20px; display: inline-block; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.4); }
@@ -48,43 +41,10 @@ body { background: var(--bg); min-height: 100vh; padding: 12px; color: var(--tex
 .meta-badge { background: rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85em; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.3); transition: 0.3s; }
 .meta-badge:hover { background: rgba(255,255,255,0.35); transform: translateY(-2px); }
 
-.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  background: rgba(255,255,255,0.5);
-  padding: 8px;
-  gap: 5px;
-  justify-content: center;
-}
-
-.tab {
-  flex: 1 1 auto;
-  min-width: 90px;
-  max-width: 120px;
-  padding: 8px 8px;
-  text-align: center;
-  cursor: pointer;
-  font-weight: 700;
-  color: var(--muted);
-  border-radius: 10px;
-  background: rgba(255,255,255,0.7);
-  border: 2px solid var(--border);
-  transition: 0.3s;
-  font-size: 0.75em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.2;
-  box-sizing: border-box;
-}
+.tabs { display: flex; flex-wrap: wrap; background: rgba(255,255,255,0.5); padding: 8px; gap: 5px; justify-content: center; }
+.tab { flex: 1 1 auto; min-width: 90px; max-width: 120px; padding: 8px 8px; text-align: center; cursor: pointer; font-weight: 700; color: var(--muted); border-radius: 10px; background: rgba(255,255,255,0.7); border: 2px solid var(--border); transition: 0.3s; font-size: 0.75em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2; box-sizing: border-box; }
 .tab:hover { background: rgba(255,255,255,0.95); transform: translateY(-2px); }
-.tab.active {
-  border-color: var(--accent);
-  background: #fff;
-  color: var(--accent-dark);
-  box-shadow: 0 4px 15px var(--shadow);
-  font-weight: 900;
-}
+.tab.active { border-color: var(--accent); background: #fff; color: var(--accent-dark); box-shadow: 0 4px 15px var(--shadow); font-weight: 900; }
 
 main { padding: 18px; }
 .sec { display: none; animation: fade 0.4s; }
@@ -186,15 +146,7 @@ svg { width: 100%; max-width: 550px; height: auto; background: rgba(255,255,255,
 .result-card .score { font-size: 2em; font-weight: 900; margin: 10px 0; }
 .result-card.winner .score { color: #6b21a8; }
 
-.achievement-sky {
-  background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 40%, #f0f9ff 100%);
-  min-height: 450px;
-  border-radius: 16px;
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 0 30px rgba(186, 230, 253, 0.5);
-}
+.achievement-sky { background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 40%, #f0f9ff 100%); min-height: 450px; border-radius: 16px; padding: 30px; position: relative; overflow: hidden; box-shadow: inset 0 0 30px rgba(186, 230, 253, 0.5); }
 .achievement-sky h2 { color: #0c4a6e; text-align: center; margin-bottom: 20px; font-size: 1.8em; text-shadow: 0 2px 4px rgba(255,255,255,0.8); position: relative; z-index: 10; }
 .cloud { position: absolute; background: rgba(255, 255, 255, 0.85); border-radius: 100px; z-index: 1; filter: blur(1px); }
 .cloud::before, .cloud::after { content: ''; position: absolute; background: rgba(255, 255, 255, 0.85); border-radius: 100px; }
@@ -251,7 +203,7 @@ select:focus, input[type="text"]:focus { border-color: var(--accent); box-shadow
     </div>
     <div class="header-row-2">
       <div class="meta-badge">👩‍🏫 إشراف: المدرّسة فلك عاصي</div>
-      <div class="meta-badge">‍🎓 عمل الطالبات: تقى يونسو - ليان شعار - حنين الصالح - ماسة شيخ اسليم</div>
+      <div class="meta-badge">👩‍🎓 عمل الطالبات: تقى يونسو - ليان شعار - حنين الصالح - ماسة شيخ اسليم</div>
       <div class="meta-badge">💻 إعداد إلكتروني: تقى يونسو</div>
     </div>
   </div>
@@ -274,10 +226,10 @@ var gameState = {};
 var TABS = [['intro', '🏠 البداية'], ['concept_map', '🗺️ الخريطة'], ['rect', '📐 المستطيل'], ['rhombus', '💎 المعين'], ['square', '🟦 المربع'], ['para', '📏 متوازي الأضلاع'], ['solo_race', '⏱️ تحدي فردي'], ['dual_race', '⚔️ تحدي ثنائي'], ['achievements', '🌟 إنجازاتي'], ['students', '👥 المتسابقات'], ['settings', '⚙️ الإعدادات']];
 
 var CFG = {
-  rect: { name: 'المستطيل', em: '', target: 'اجعل كل الزوايا 90° والأضلاع المتقابلة متساوية', examples: ['🚪 الباب', ' شاشة الجوال', '📄 ورقة A4', '🪟 النافذة'], properties: ['كل الزوايا = 90°', 'الأضلاع المتقابلة متساوية', 'القطران متساويان', 'القطران متناصفان', 'المساحة = الطول × العرض'] },
-  rhombus: { name: 'المعين', em: '💎', target: 'اجعل كل الأضلاع متساوية', examples: ['🪁 طائرة ورقية', '♠️ شكل البستوني', '💎 الجوهرة', '🔷 المعين'], properties: ['كل الأضلاع متساوية', 'الزوايا المتقابلة متساوية', 'القطران متعامدان', 'المساحة = (ق1 × ق2) ÷ 2'] },
-  square: { name: 'المربع', em: '', target: 'اجعل كل الأضلاع متساوية وكل الزوايا 90°', examples: ['🎲 حجر النرد', '🟦 بلاطة', '♟️ مربع الشطرنج', '🖼️ إطار صورة'], properties: ['كل الأضلاع متساوية', 'كل الزوايا = 90°', 'القطران متساويان ومتعامدان', 'المساحة = الضلع × الضلع'] },
-  para: { name: 'متوازي الأضلاع', em: '📏', target: 'اجعل الأضلاع المتقابلة متساوية ومتوازية', examples: ['🏗️ هيكل مائل', '🪟 نافذة مائلة', '🛋️ وسادة', '🔷 شكل مائل'], properties: ['الأضلاع المتقابلة متساوية ومتوازية', 'الزوايا المتقابلة متساوية', 'القطران متناصفان', 'مجموع الزوايا المتجاورة = 180°', 'المساحة = القاعدة × الارتفاع'] }
+  rect: { name: 'المستطيل', em: '📐', definition: 'المستطيل هو شكل رباعي فيه كل زواياه قائمة (90°)، وكل ضلعين متقابلين متساويان في الطول ومتوازيان.', target: 'اجعل كل الزوايا 90° والأضلاع المتقابلة متساوية', examples: ['🚪 الباب', '📱 شاشة الجوال', '📄 ورقة A4', '🪟 النافذة'], properties: ['كل الزوايا = 90°', 'الأضلاع المتقابلة متساوية', 'القطران متساويان', 'القطران متناصفان', 'المساحة = الطول × العرض'] },
+  rhombus: { name: 'المعين', em: '💎', definition: 'المعين هو شكل رباعي جميع أضلاعه متساوية في الطول، وقطراه متعامدان وينصف كل منهما الآخر.', target: 'اجعل كل الأضلاع متساوية', examples: ['🪁 طائرة ورقية', '♠️ شكل البستوني', '💎 الجوهرة', '🔷 المعين'], properties: ['كل الأضلاع متساوية', 'الزوايا المتقابلة متساوية', 'القطران متعامدان', 'المساحة = (ق1 × ق2) ÷ 2'] },
+  square: { name: 'المربع', em: '🟦', definition: 'المربع هو شكل رباعي جميع أضلاعه متساوية وجميع زواياه قائمة (90°)، وهو يجمع خصائص المستطيل والمعين معاً.', target: 'اجعل كل الأضلاع متساوية وكل الزوايا 90°', examples: ['🎲 حجر النرد', '🟦 بلاطة', '♟️ مربع الشطرنج', '🖼️ إطار صورة'], properties: ['كل الأضلاع متساوية', 'كل الزوايا = 90°', 'القطران متساويان ومتعامدان', 'المساحة = الضلع × الضلع'] },
+  para: { name: 'متوازي الأضلاع', em: '📏', definition: 'متوازي الأضلاع هو شكل رباعي فيه كل ضلعين متقابلين متساويان في الطول ومتوازيان، وقطراه ينصفان بعضهما.', target: 'اجعل الأضلاع المتقابلة متساوية ومتوازية', examples: ['🏗️ هيكل مائل', '🪟 نافذة مائلة', '🛋️ وسادة', '🔷 شكل مائل'], properties: ['الأضلاع المتقابلة متساوية ومتوازية', 'الزوايا المتقابلة متساوية', 'القطران متناصفان', 'مجموع الزوايا المتجاورة = 180°', 'المساحة = القاعدة × الارتفاع'] }
 };
 
 var QUESTIONS = [
@@ -395,11 +347,12 @@ function buildSections() {
     var c = CFG[key];
     h += '<div class="sec" id="sec-' + key + '">';
     h += '<h2 class="section-title">' + c.em + ' ' + c.name + '</h2>';
+    h += '<div class="box" style="background:linear-gradient(135deg,#f3e8ff,#e9d5ff);border-color:#a78bfa"><p style="font-weight:700;color:#6b21a8;margin-bottom:6px">📖 التعريف:</p><p>' + c.definition + '</p></div>';
     h += '<div class="box"><p>' + c.target + '.</p></div>';
     h += '<div class="example-box"><h4>🌍 أمثلة من حياتنا:</h4><div class="examples">';
     for (var ei = 0; ei < c.examples.length; ei++) h += '<div class="ex-item">' + c.examples[ei] + '</div>';
     h += '</div></div>';
-    h += '<div class="properties-box"><h3> الخصائص:</h3><ul>';
+    h += '<div class="properties-box"><h3>📋 الخصائص:</h3><ul>';
     for (var pi = 0; pi < c.properties.length; pi++) h += '<li>' + c.properties[pi] + '</li>';
     h += '</ul></div>';
     h += '<div class="box" style="border-right-color:var(--accent); background:linear-gradient(135deg,#f3e8ff,#e9d5ff)">';
@@ -426,20 +379,20 @@ function buildSections() {
   h += '<div id="soloGame" style="display:none"><div style="text-align:center;margin-bottom:10px"><div class="dual-timer" id="soloTimer">30</div><div style="font-size:1.1em;font-weight:900">النقاط: <span id="soloScore">0</span> ⭐</div></div><div class="dual-question-img" id="soloImg"></div><div class="dual-question-text" id="soloQ"></div><div id="soloOpts" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px"></div></div></div>';
 
   h += '<div class="sec" id="sec-dual_race">';
-  h += '<h2 class="section-title">⚔️ تحدي ثنائي (120 ثانية)</h2>';
+  h += '<h2 class="section-title">⚔️ تحدي ثنائي (60 ثانية)</h2>';
   h += '<div id="dualInstructions">';
   h += '<div class="instructions-box"><h3>📋 قواعد المنافسة</h3><ul>';
   h += '<li>🎯 الهدف: الإجابة على أكبر عدد من الأسئلة بشكل صحيح</li>';
   h += '<li>👥 اللاعبات: لاعبتان على نفس الجهاز</li>';
-  h += '<li>⏱️ المدة: 120 ثانية (دقيقتان)</li>';
+  h += '<li>⏱️ المدة: 60 ثانية (دقيقة واحدة)</li>';
   h += '<li>📱 التوزيع: اللاعب 1 يستخدم النصف الأيمن، اللاعب 2 يستخدم النصف الأيسر</li>';
   h += '<li>⭐ النقاط: كل إجابة صحيحة = نجمة واحدة</li>';
-  h += '<li> الفائزة: من تجمع نجوم أكثر عند انتهاء الوقت</li>';
+  h += '<li>🏆 الفائزة: من تجمع نجوم أكثر عند انتهاء الوقت</li>';
   h += '</ul></div>';
   h += '<div style="text-align:center;margin-top:15px"><button class="btn success" style="font-size:1.1em;padding:12px 35px" onclick="showDualStart()">فهمت! ابدأ المنافسة</button></div>';
   h += '</div>';
   h += '<div id="dualGame" style="display:none">';
-  h += '<div class="dual-header"><div style="text-align:center"><div style="font-size:0.85em;color:#9333ea;font-weight:700" id="p1name">اللاعب 1</div><div style="font-size:1.5em;font-weight:900;color:#9333ea" id="p1s">0</div></div><div class="dual-timer" id="dt">120</div><div style="text-align:center"><div style="font-size:0.85em;color:#a855f7;font-weight:700" id="p2name">اللاعب 2</div><div style="font-size:1.5em;font-weight:900;color:#a855f7" id="p2s">0</div></div></div>';
+  h += '<div class="dual-header"><div style="text-align:center"><div style="font-size:0.85em;color:#9333ea;font-weight:700" id="p1name">اللاعب 1</div><div style="font-size:1.5em;font-weight:900;color:#9333ea" id="p1s">0</div></div><div class="dual-timer" id="dt">60</div><div style="text-align:center"><div style="font-size:0.85em;color:#a855f7;font-weight:700" id="p2name">اللاعب 2</div><div style="font-size:1.5em;font-weight:900;color:#a855f7" id="p2s">0</div></div></div>';
   h += '<div class="dual-question-img" id="dimg"></div>';
   h += '<div class="dual-question-text" id="dq"></div>';
   h += '<div class="dual-split">';
@@ -491,7 +444,7 @@ function renderAchievementSky() {
     h += '<div class="sky-star" style="left:' + x + '%;top:' + y + '%;animation-delay:' + delay + 's;font-size:' + size + 'em;opacity:' + opacity + '">⭐</div>';
   }
   h += '</div>';
-  h += '<div class="achievement-count">لقد جمعتِ ' + stars + ' نجمة! </div>';
+  h += '<div class="achievement-count">لقد جمعتِ ' + stars + ' نجمة! 🎉</div>';
   sky.innerHTML = h;
 }
 
@@ -698,7 +651,7 @@ function checkTransform(key) {
   if (success) {
     shapesCompleted++;
     addStar();
-    toast(' أحسنت! نجمة جديدة ⭐ (أشكال محولة: ' + shapesCompleted + ')');
+    toast('🎉 أحسنت! نجمة جديدة ⭐ (أشكال محولة: ' + shapesCompleted + ')');
     updateStatsUI();
   } else {
     toast('⚠️ لم تكتمل الشروط بعد. اضغط 💡 مساعدة!');
@@ -779,12 +732,30 @@ function openPlayerSelectionModal(playerNum) {
   for (var i = 0; i < availableNames.length; i++) {
     optionsHTML += '<option value="' + availableNames[i] + '">' + availableNames[i] + '</option>';
   }
-  modal.innerHTML = '<div class="modal-box"><h3>🎯 اختيار ' + (playerNum === 1 ? 'المتسابقة الأولى' : 'المتسابقة الثانية') + '</h3><p>اخترِ اسم المتسابقة من القائمة أو اضغطي "اختيار عشوائي"</p><div style="margin:20px 0"><label style="display:block;font-weight:700;margin-bottom:8px;color:var(--accent-dark)">الاسم:</label><select id="playerNameSelect">' + optionsHTML + '</select></div><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn help" onclick="selectRandomName()">🎲 اختيار عشوائي</button><button class="btn success" onclick="confirmPlayerSelection()">✔ تأكيد</button><button class="btn ghost" onclick="closePlayerModal()">✖ إلغاء</button></div><div style="margin-top:15px;padding-top:15px;border-top:1px solid var(--border)"><button class="btn ghost" style="font-size:0.85em" onclick="openNameManagerFromPlayerModal()">⚙️ إدارة الأسماء</button></div></div>';
+  modal.innerHTML = '<div class="modal-box">' +
+    '<h3>🎯 اختيار ' + (playerNum === 1 ? 'المتسابقة الأولى' : 'المتسابقة الثانية') + '</h3>' +
+    '<p>اخترِ اسم المتسابقة من القائمة أو اضغطي "اختيار عشوائي"</p>' +
+    '<div style="margin:20px 0">' +
+      '<label style="display:block;font-weight:700;margin-bottom:8px;color:var(--accent-dark)">الاسم:</label>' +
+      '<select id="playerNameSelect">' + optionsHTML + '</select>' +
+    '</div>' +
+    '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">' +
+      '<button class="btn warning" onclick="selectRandomName()" style="font-size:1.05em;padding:12px 25px">🎲 اختيار عشوائي</button>' +
+      '<button class="btn success" onclick="confirmPlayerSelection()">✔ تأكيد</button>' +
+      '<button class="btn ghost" onclick="closePlayerModal()">✖ إلغاء</button>' +
+    '</div>' +
+    '<div style="margin-top:15px;padding-top:15px;border-top:1px solid var(--border)">' +
+      '<button class="btn ghost" style="font-size:0.85em" onclick="openNameManagerFromPlayerModal()">⚙️ إدارة الأسماء</button>' +
+    '</div>' +
+  '</div>';
   document.body.appendChild(modal);
 }
 
 function selectRandomName() {
-  if (availableNames.length === 0) availableNames = studentNames.slice();
+  if (availableNames.length === 0) {
+    availableNames = studentNames.slice();
+    toast('🔄 تم إعادة تدوير الأسماء!');
+  }
   var randomIndex = Math.floor(Math.random() * availableNames.length);
   var select = el('playerNameSelect');
   if (select) {
@@ -845,8 +816,46 @@ function openStudentsModal() {
   for (var i = 0; i < usedNames.length; i++) {
     usedHTML += '<div style="padding:10px;margin:6px 0;background:#faf5ff;border-radius:8px;font-weight:700;display:flex;justify-content:space-between;align-items:center;opacity:0.7;border:1px solid #e9d5ff"><span>' + usedNames[i] + '</span><span style="font-size:0.8em;color:#a855f7">🔒 مستخدمة</span></div>';
   }
-  modal.innerHTML = '<div class="modal-box" style="max-width:600px;max-height:85vh;overflow-y:auto"><h3>👥 قائمة المتسابقات</h3><p style="margin-bottom:15px">إجمالي الأسماء: <b>' + studentNames.length + '</b> | المتاحة: <b style="color:#6b21a8">' + availableNames.length + '</b> | المستخدمة: <b style="color:#a855f7">' + usedNames.length + '</b></p><div style="background:#f3e8ff;padding:12px;border-radius:10px;margin-bottom:15px;border:1px solid #e9d5ff"><h4 style="color:#6b21a8;margin-bottom:8px">✅ الأسماء المتاحة:</h4>' + (listHTML || '<p style="color:var(--muted);text-align:center">لا توجد أسماء متاحة!</p>') + '</div>' + (usedHTML ? '<div style="background:#faf5ff;padding:12px;border-radius:10px;margin-bottom:15px;border:1px solid #e9d5ff"><h4 style="color:#a855f7;margin-bottom:8px">🔒 الأسماء المستخدمة:</h4>' + usedHTML + '</div>' : '') + '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px;padding-top:15px;border-top:1px solid var(--border)"><button class="btn help" onclick="resetAllNames()">🔄 إعادة تدوير كل الأسماء</button><button class="btn ghost" onclick="openNameManagerFromModal()">⚙️ إدارة الأسماء</button><button class="btn success" onclick="closeStudentsModal()">✔ إغلاق</button></div></div>';
+  modal.innerHTML = '<div class="modal-box" style="max-width:600px;max-height:85vh;overflow-y:auto">' +
+    '<h3>👥 قائمة المتسابقات</h3>' +
+    '<p style="margin-bottom:15px">إجمالي الأسماء: <b>' + studentNames.length + '</b> | المتاحة: <b style="color:#6b21a8">' + availableNames.length + '</b> | المستخدمة: <b style="color:#a855f7">' + usedNames.length + '</b></p>' +
+    '<div style="background:#f3e8ff;padding:12px;border-radius:10px;margin-bottom:15px;border:1px solid #e9d5ff"><h4 style="color:#6b21a8;margin-bottom:8px">✅ الأسماء المتاحة:</h4>' + (listHTML || '<p style="color:var(--muted);text-align:center">لا توجد أسماء متاحة!</p>') + '</div>' +
+    (usedHTML ? '<div style="background:#faf5ff;padding:12px;border-radius:10px;margin-bottom:15px;border:1px solid #e9d5ff"><h4 style="color:#a855f7;margin-bottom:8px">🔒 الأسماء المستخدمة:</h4>' + usedHTML + '</div>' : '') +
+    '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px;padding-top:15px;border-top:1px solid var(--border)">' +
+      '<button class="btn warning" onclick="pickRandomStudent()" style="font-size:1.05em;padding:12px 25px">🎲 اختيار عشوائي</button>' +
+      '<button class="btn help" onclick="resetAllNames()">🔄 إعادة تدوير كل الأسماء</button>' +
+      '<button class="btn ghost" onclick="openNameManagerFromModal()">⚙️ إدارة الأسماء</button>' +
+      '<button class="btn success" onclick="closeStudentsModal()">✔ إغلاق</button>' +
+    '</div>' +
+  '</div>';
   document.body.appendChild(modal);
+}
+
+function pickRandomStudent() {
+  if (availableNames.length === 0) {
+    availableNames = studentNames.slice();
+    toast('🔄 تم إعادة تدوير الأسماء!');
+  }
+  var randomIndex = Math.floor(Math.random() * availableNames.length);
+  var selectedName = availableNames[randomIndex];
+  availableNames.splice(randomIndex, 1);
+  
+  var resultModal = document.createElement('div');
+  resultModal.className = 'modal-overlay';
+  resultModal.innerHTML = '<div class="modal-box" style="max-width:420px">' +
+    '<div style="font-size:4em;margin-bottom:10px">🎯</div>' +
+    '<h3>✨ تم اختيار ✨</h3>' +
+    '<div style="background:linear-gradient(135deg,#f3e8ff,#e9d5ff);padding:20px;border-radius:15px;margin:20px 0;border:3px solid var(--accent)">' +
+      '<div style="font-size:1.8em;font-weight:900;color:var(--accent-dark)">' + selectedName + '</div>' +
+    '</div>' +
+    '<p style="color:var(--muted);font-size:0.9em">الأسماء المتبقية: <b>' + availableNames.length + '</b> من <b>' + studentNames.length + '</b></p>' +
+    '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:15px">' +
+      '<button class="btn success" onclick="this.parentElement.parentElement.parentElement.remove()">✔ حسناً</button>' +
+    '</div>' +
+  '</div>';
+  document.body.appendChild(resultModal);
+  closeStudentsModal();
+  setTimeout(function() { openStudentsModal(); }, 500);
 }
 
 function resetAllNames() { availableNames = studentNames.slice(); closeStudentsModal(); setTimeout(function() { openStudentsModal(); }, 300); toast('🔄 تم إعادة تدوير جميع الأسماء!'); }
@@ -862,7 +871,7 @@ function startDual() {
   el('z2label').textContent = dualPlayers.p2;
   el('dualGame').style.display = 'block';
   el('dualResult').style.display = 'none';
-  dual.active = true; dual.left = 120; dual.p1 = 0; dual.p2 = 0;
+  dual.active = true; dual.left = 60; dual.p1 = 0; dual.p2 = 0;
   dual.queue = shuffleArray(QUESTIONS);
   el('dt').classList.remove('urgent');
   updateDualUI();
@@ -954,7 +963,7 @@ function endDual() {
     resultHTML += '<div class="result-card loser"><div class="trophy">📜</div><h3>شهادة شكر وتقدير</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p2 + '</p><div class="score">' + dual.p2 + ' ⭐</div><p>شكراً لمشاركتكِ! 💪</p></div>';
   } else if (dual.p2 > dual.p1) {
     resultHTML += '<div class="result-card loser"><div class="trophy">📜</div><h3>شهادة شكر وتقدير</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p1 + '</p><div class="score">' + dual.p1 + ' ⭐</div><p>شكراً لمشاركتكِ! 💪</p></div>';
-    resultHTML += '<div class="result-card winner"><div class="trophy">🏆</div><h3>درع التميز</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p2 + '</p><div class="score">' + dual.p2 + ' ⭐</div><p>أحسنتِ! أداء متميز </p></div>';
+    resultHTML += '<div class="result-card winner"><div class="trophy">🏆</div><h3>درع التميز</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p2 + '</p><div class="score">' + dual.p2 + ' ⭐</div><p>أحسنتِ! أداء متميز 🌟</p></div>';
   } else {
     resultHTML += '<div class="result-card winner"><div class="trophy">🤝</div><h3>تعادل!</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p1 + ' و ' + dualPlayers.p2 + '</p><div class="score">' + dual.p1 + ' ⭐</div><p>أداء متساوي ومتميز! 🌟</p></div>';
     resultHTML += '<div class="result-card winner"><div class="trophy">🤝</div><h3>تعادل!</h3><p style="font-size:1.2em;font-weight:900">' + dualPlayers.p1 + ' و ' + dualPlayers.p2 + '</p><div class="score">' + dual.p2 + ' ⭐</div><p>أداء متساوي ومتميز! 🌟</p></div>';
@@ -968,7 +977,7 @@ function endDual() {
 function resetDual() {
   dual.active = false;
   clearInterval(dual.timer);
-  dual.left = 120; dual.p1 = 0; dual.p2 = 0;
+  dual.left = 60; dual.p1 = 0; dual.p2 = 0;
   dual.queue = []; dual.answered = [false, false];
   availableNames = studentNames.slice();
   el('dualResult').style.display = 'none';
@@ -991,7 +1000,7 @@ function resetStars() {
   if (confirm('هل أنتِ متأكدة من تصفير جميع النجوم؟')) {
     stars = 0;
     updateStarsUI();
-    toast('️ تم تصفير النجوم');
+    toast('🗑️ تم تصفير النجوم');
   }
 }
 
